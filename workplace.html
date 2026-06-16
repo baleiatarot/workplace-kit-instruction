@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workplace Harmony Ritual · 工作場所和諧儀式指引 · Baleia Tarot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --accent: #6f8fc2;
+  --accent-deep: #344e75;
+  --ivory: #f1f4f9;
+  --ink: #21262f;
+  --text-muted: #525a66;
+  --text-faint: #93999f;
+  --border: rgba(33,38,47,0.10);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--ivory);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 560px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+.hero {
+  position: relative;
+  padding: 3.5rem 1.5rem 2.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50px; left: -70px;
+  width: 230px; height: 230px;
+  border: 0.75px solid var(--accent);
+  border-radius: 40% 60% 50% 50%;
+  opacity: 0.3;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: -60px;
+  width: 200px; height: 200px;
+  border: 0.75px solid var(--accent);
+  border-radius: 50% 50% 60% 40%;
+  opacity: 0.3;
+}
+.hero-eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 4px;
+  position: relative;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 6.5vw, 36px);
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.hero-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.8;
+  position: relative;
+}
+
+.meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+.meta-card {
+  background: white;
+  border: 0.5px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+.meta-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 6px;
+}
+.meta-body { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+.meta-body div { margin-bottom: 2px; }
+
+.section-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin: 2.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); }
+
+.step {
+  margin-bottom: 1.75rem;
+  padding-left: 44px;
+  position: relative;
+}
+.step-num {
+  position: absolute;
+  left: 0; top: 0;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.step-body { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
+.step-body p { margin-bottom: 8px; }
+
+.script-box {
+  background: white;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+.script-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 8px;
+}
+.script-line { margin-bottom: 10px; }
+.script-line:last-child { margin-bottom: 0; }
+.script-en { font-size: 13px; color: var(--text-muted); margin-bottom: 2px; }
+.script-zh {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15.5px;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.tip-box {
+  background: rgba(111,143,194,0.08);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+.tip-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 8px; }
+.tip-box ul { list-style: none; }
+.tip-box li { font-size: 13px; color: var(--text-muted); padding-left: 16px; position: relative; margin-bottom: 4px; }
+.tip-box li::before { content: '·'; position: absolute; left: 0; color: var(--accent); }
+
+.closing {
+  margin-top: 3rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: white;
+  border-radius: 16px;
+  border: 0.5px solid var(--border);
+}
+.closing-label {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 12px;
+}
+.closing-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.9;
+  text-align: left;
+}
+.closing-list { list-style: none; margin: 1rem 0; text-align: left; }
+.closing-list li { font-size: 13.5px; color: var(--text-muted); padding-left: 16px; position: relative; margin-bottom: 4px; }
+.closing-list li::before { content: '·'; position: absolute; left: 0; color: var(--accent); }
+.closing-final {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--ink);
+  margin-top: 1.25rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.footer-nav { text-align: center; margin-top: 2.5rem; }
+.footer-link { font-size: 12px; letter-spacing: 0.06em; color: var(--text-faint); text-decoration: none; }
+.footer-brand {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">WORKPLACE HARMONY RITUAL</div>
+  <div class="hero-title">工作場所和諧儀式指引</div>
+  <div class="hero-quote">這是一個屬於你的溫柔時刻，<br>讓你與環境、節奏與人際關係重新對齊，<br>為平靜與合作創造空間。</div>
+</div>
+
+<div class="page">
+
+  <div class="meta-row">
+    <div class="meta-card">
+      <div class="meta-label">建議進行時間</div>
+      <div class="meta-body"><div>基本：星期四</div><div>更佳：接近滿月的星期四</div></div>
+    </div>
+    <div class="meta-card">
+      <div class="meta-label">儀式前準備</div>
+      <div class="meta-body"><div>耐熱器皿 ×2（蠟燭／羊皮紙）</div><div>安靜、遠離小孩寵物的空間</div></div>
+    </div>
+  </div>
+
+  <div class="section-label">儀式步驟</div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-title">書寫意圖</div>
+    <div class="step-body">
+      <p>讓自己慢慢靜下來，感受你對工作環境與人際關係的真正期望。請於羊皮紙上書寫：</p>
+    </div>
+    <div class="script-box">
+      <div class="script-eyebrow">主要意圖</div>
+      <div class="script-line">
+        <div class="script-en">I, (你的名字), ask in the name of the Goddess, God, and the Great Spirit to bring peace and harmony to my workplace at (公司名稱／部門).</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>如有其他相關願望（如：溝通順暢、合作提升、氣氛穩定），可將清晰而具體的願望寫在羊皮紙中央。</p>
+    </div>
+    <div class="tip-box">
+      <div class="tip-label">小提示</div>
+      <ul>
+        <li>請以正面語句書寫</li>
+        <li>避免指名道姓（讓關係自然調整）</li>
+        <li>可加入時間方向（例如：三個月內）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-title">啟動意圖</div>
+    <div class="step-body">
+      <p>將少量精油滴於掌心，輕輕塗抹於蠟燭表面。由蠟燭頂端向下至底部緩慢塗抹，讓你的意圖隨著這個動作自然流動與凝聚。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-title">點燃與連結</div>
+    <div class="step-body">
+      <p>將蠟燭放於耐熱器皿上並點燃。面向燭光，慢慢讀出紙上的每一句話。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-title">感受與內化</div>
+    <div class="step-body">
+      <p>閉上眼睛，想像你的願望已經實現。感受整個工作環境變得平靜、清晰而協調，人與人之間的互動自然流動。想像柔和的藍色光芒逐漸充滿整個空間，帶來安定、理解與和諧。不需要集中於特定個人，讓這份平衡自然地流向整個環境。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-title">釋放與轉化</div>
+    <div class="step-body">
+      <p>用燭火點燃羊皮紙，並放入耐熱器皿中燃燒。讓你的意圖隨火焰轉化與釋放，進入持續運作的狀態。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">6</div>
+    <div class="step-title">完成儀式</div>
+    <div class="step-body">
+      <p>讓蠟燭自然燃燒至結束。此刻，你已為新的連結與平衡打開空間。</p>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="closing-label">儀式之後</div>
+    <div class="closing-text">讓事情自然發生，不需要刻意追尋或控制。<br>留意環境中的細微變化，例如：</div>
+    <ul class="closing-list">
+      <li>溝通變得更順暢</li>
+      <li>氣氛變得更穩定</li>
+      <li>衝突自然減少</li>
+    </ul>
+    <div class="closing-text">當你的狀態改變，<br>關係會以適合你的方式重新排列與平衡。</div>
+    <div class="closing-final">有些關係，不需要用力，<br>只需要剛剛好的準備。</div>
+  </div>
+
+  <div class="footer-nav">
+    <a class="footer-link" href="../landing.html">← 返回 Baleia Tarot</a>
+  </div>
+  <div class="footer-brand">Baleia Tarot</div>
+
+</div>
+</body>
+</html>
